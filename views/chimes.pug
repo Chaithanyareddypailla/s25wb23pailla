@@ -3,11 +3,11 @@ extends layout
 block content
   h1 Search Results: Chimes
 
-  - let results = [
+  - var results = [
       { origin: 'Forest of Echoes', tone: 'Melodic', clarity: 8 },
       { origin: 'Crystal Peaks', tone: 'Haunting', clarity: 6 },
       { origin: 'Forgotten Temple', tone: 'Sharp', clarity: 9 }
-    ];
+    ]
 
   .container-fluid
     .row
@@ -20,3 +20,4 @@ block content
 
   p
     a(href="/chimes") View Chimes Search Results
+
