@@ -9,7 +9,6 @@ var usersRouter = require('./routes/users');
 var chimesRouter = require('./routes/chimes');
 var gridRouter = require('./routes/grid');
 
-
 var app = express();
 
 // view engine setup
