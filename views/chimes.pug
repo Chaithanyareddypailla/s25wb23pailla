@@ -3,11 +3,7 @@ extends layout
 block content
   h1 Search Results: Chimes
 
-  - var results = [
-      { origin: 'Forest of Echoes', tone: 'Melodic', clarity: 8 },
-      { origin: 'Crystal Peaks', tone: 'Haunting', clarity: 6 },
-      { origin: 'Forgotten Temple', tone: 'Sharp', clarity: 9 }
-    ]
+  - var results = [{ origin: 'Forest of Echoes', tone: 'Melodic', clarity: 8 }, { origin: 'Crystal Peaks', tone: 'Haunting', clarity: 6 }, { origin: 'Forgotten Temple', tone: 'Sharp', clarity: 9 }]
 
   .container-fluid
     .row
@@ -16,7 +12,5 @@ block content
           h5 Chime
           p Origin: #{item.origin}
           p Tone: #{item.tone}
-          p Clarity: #{item.clarity}
+          p Clarity:
 
-  p
-    a(href="/chimes") View Chimes Search Results
