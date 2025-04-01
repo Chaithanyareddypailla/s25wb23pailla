@@ -1,19 +1,19 @@
 extends layout
 
 block content
-  h2 Welcome to My Express App
+  h1 Search Results: Chimes
 
-  button(type="button", class="btn btn-primary", onclick="faster()") Press Me!
-  div#faster.mt-3 Add in extra
+  - var results = [{ origin: 'Forest of Echoes', tone: 'Melodic', clarity: 8 }, { origin: 'Crystal Peaks', tone: 'Haunting', clarity: 6 }, { origin: 'Forgotten Temple', tone: 'Sharp', clarity: 9 }]
 
-  script.
-    let value = 1;
-    let amt = 2;
+  .container-fluid
+    .row
+      each item in results
+        .col-sm-2
+          h5 Chime
+          p Origin: #{item.origin}
+          p Tone: #{item.tone}
+          p Clarity:
+          p
+            a(href="/chimes") View Chimes Search Results
 
-    function faster() {
-      amt *= 2;
-      value += amt;
-      document.getElementById("faster").textContent = `Faster ${value} times ${amt}`;
-
-    }
 
