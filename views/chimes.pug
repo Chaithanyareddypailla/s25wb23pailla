@@ -1,17 +1,24 @@
 extends layout
 
 block content
-  h1 Search Results: Chimes
+  h2 Search Results for Chimes
 
-  - var results = [{ origin: 'Forest of Echoes', tone: 'Melodic', clarity: 8 }, { origin: 'Crystal Peaks', tone: 'Haunting', clarity: 6 }, { origin: 'Forgotten Temple', tone: 'Sharp', clarity: 9 }]
+  - var results = [{ name: "Wind Chime", material: "Bamboo", cost: 15 },{ name: "Temple Bell", material: "Brass", cost: 30 },{ name: "Zen Chime", material: "Crystal", cost: 25 }];
 
-  .container-fluid
-    .row
-      each item in results
-        .col-sm-2
-          h5 Chime
-          p Origin: #{item.origin}
-          p Tone: #{item.tone}
-          p Clarity:
+  div.container-fluid
+    div.row
+      each chime, index in results
+        div.col-sm-3.bg-light.p-3.m-2.rounded.shadow.text-center(
+          onclick=`buy(${index})`, style="cursor: pointer;"
+        )
+          h5 #{chime.name}
+          p Material: #{chime.material}
+          p Cost: $#{chime.cost}
+
+  script.
+    function buy(index) {
+      alert("You purchased item " + index);
+    }
+
           
 
